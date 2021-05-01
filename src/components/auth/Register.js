@@ -78,7 +78,7 @@ const RegisterRetailer = () => {
           headers: {
           'content-type': 'application/json'
         }}
-        const res  = await axios.post("http://aac930744096.ngrok.io/signup/",registerData,config)
+        const res  = await axios.post("https://e9af1ac45e0a.ngrok.io/signup/",registerData,config)
         if(res.data.success === true){
           localStorage.setItem('log', true)
           localStorage.setItem('name', registerData.username)
@@ -99,7 +99,7 @@ const RegisterRetailer = () => {
           headers: {
           'content-type': 'application/json'
         }}
-        const res  = await axios.post("http://aac930744096.ngrok.io/login/",signInData,config)
+        const res  = await axios.post("https://e9af1ac45e0a.ngrok.io/login/",signInData,config)
         console.log(res)
         if(res.data.success === true){
           localStorage.setItem('log', true)
