@@ -76,10 +76,11 @@ const RegisterRetailer = () => {
         e.preventDefault();
         const config = {
           headers: {
-          'content-type': 'application/json'
+          'content-type': 'application/json',
+          
         }}
 
-        const res  = await axios.post("http://0f13e9d9366d.ngrok.io/signup",registerData,config)
+        const res  = await axios.post("https://adfd08a6ef82.ngrok.io/signup",registerData,config)
 
         if(res.data.success === true){
           localStorage.setItem('log', true)
@@ -98,11 +99,13 @@ const RegisterRetailer = () => {
         console.log(signInData)
         e.preventDefault();
         const config = {
-          headers: {
+          
+            headers: {
           'content-type': 'application/json'
+
         }}
 
-        const res  = await axios.post("http://0f13e9d9366d.ngrok.io/login",signInData,config)
+        const res  = await axios.post("https://adfd08a6ef82.ngrok.io/login",signInData,config)
 
         console.log(res)
         if(res.data.success === true){
